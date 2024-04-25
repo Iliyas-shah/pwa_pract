@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="manifest" href="manifest.webmanifest">
+<link rel="service" href="sw.js">
+</head>
+<body>
+    <h1>pwa experiment</h1>
+    <p>Progressive web apps
+        A progressive web app (PWA) is an app that's built using web platform technologies, but that provides a user experience like that of a platform-specific app.
+        <br>
+        Like a website, a PWA can run on multiple platforms and devices from a single codebase. Like a platform-specific app, it can be installed on the device, can operate while offline and in the background, and can integrate with the device and with other installed apps.
+        Progressive Web Applications (PWAs) are apps built with web technologies that we probably all know and love, like HTML, CSS, and JavaScript. But they have the feel and functionality of an actual native app. Wait a minute! Native Apps, what do we mean by this?
+        <br>
+        A Native App is a software application built in a specific programming language for a specific device platform, either IOS or Android.
+        PWAs are built with the capabilities like push notifications and the ability to work offline. They are also built on and enhanced with modern APIs which makes it easy to deliver improved capabilities along with reliability and the ability to install them on any device.
+        <br>
+        PWAs takes advantage of the huge web ecosystem this is inclusive of the plugins, and community and the relative ease of deploying and keeping a website contrary to a native application which is pretty difficult to develop. This means you can build a PWA quickly and easily.
+        <br>
+        With its popularity many companies have shifted into the product, I tend to believe that this is because of its ability to run on an android and iOS without much difference. Some good examples of top companies who have their products as PWAs include: Twitter, Pintrest, Uber, Tiktok, Spotify, Jumia (a leading e-commerce site in Africa) etc...
+        <br>
+        A common feature about this products is that they are all installable on your home screen, able to work offline from where you last left and offer a comparable experience and features to their native apps.
+        <br>
+        Just like when building a native mobile app there are some expectations that should be met to make a good product for consumer use, the same thing applies to PWAs. Let's discuss what makes a good PWA.
+    </p>
+</body>
+<script>
+    if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/sw.js', { scope: "/" }).then(function (registration) {
+            // Registration was successful
+            console.log('ServiceWorker registration successful with scope:', registration.scope);
+        }).catch(function (err) {
+            // Registration failed
+            console.log('ServiceWorker registration failed: ', err);
+        });
+    });
+}
+
+    </script>
+</html>
