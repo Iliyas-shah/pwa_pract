@@ -1,6 +1,7 @@
 {
     "name":"supaStrikerShoe",
-    "short_name":"",
+    "short_name":"shoestrike",
+    "start_url": "/",
     "icons":
     [
         {
@@ -28,5 +29,5 @@
         }
     ],
                 "id": "/?source=pwa",
-                "start_url": "/?source=pwa","theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"
+                "theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"
 }
